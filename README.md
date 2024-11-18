@@ -27,7 +27,7 @@ Remote takeover is allowed during truck stoppage.
   
 # Baseline
 
-References [1]-[3] have made their codes open source, and we utilize the 2D mode from [3] for comparison. While [1]-[3] do not simultaneously account for both kinematic and dynamic constraints, they are included as baselines to validate the effectiveness of the proposed method.  
+References [1]-[3] have made their codes open source, and we utilize them for comparison(2D mode of [3]). While [1]-[3] do not simultaneously account for both kinematic and dynamic constraints, they are included as baselines to validate the effectiveness of the proposed method.  
   
 [1] Y. Ouyang, B. Li, Y. Zhang, T. Acarman, Y. Guo and T. Zhang, "Fast and Optimal Trajectory Planning for Multiple Vehicles in a Nonconvex and Cluttered Environment: Benchmarks, Methodology, and Experiments," 2022 International Conference on Robotics and Automation (ICRA)  
   
