@@ -1,7 +1,7 @@
 # AMT
 
 Note: The project is just for internal discussion currently.  
-Contact me: Ji.Zhou@monash.edu or zhouji1212@gmail.com  
+Contact me: Ji.Zhou@monash.edu or zhouji1212@gmail.com or ZhouJ@bupt.cn  
   
 # Overview method
 
