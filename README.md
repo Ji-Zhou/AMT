@@ -1,6 +1,6 @@
 # AMT
 
-Note: The project is just for internal discussion currently.  
+Note: The project is just for internal discussion currently.  For the replay of GIF, please refresh this interface. This project currently does not support loop playback of GIF.
 Contact me: Ji.Zhou@monash.edu or zhouji1212@gmail.com or ZhouJ@bupt.cn  
   
 # Overview method
@@ -64,13 +64,13 @@ The above two situations are only for testing the abilities of proposed method. 
   
 # Test 4
 
-In the case of 8 trucks, tasks are perfect finished.  
+In the case of 8 trucks, tasks can be also finished.  
 
 ![img](https://github.com/Ji-Zhou/AMT/blob/main/git/8_1.gif)
 
 # Test 5
 
-In the case of 16 trucks, more braking, reversing, and replanning are carried out, but trucks are still able to reach the finish line smoothly  
+In the case of 16 trucks, more braking, reversing, and replanning are carried out, but trucks are still able to reach the finish point.    
 
 ![img](https://github.com/Ji-Zhou/AMT/blob/main/git/16_1.gif)
 
