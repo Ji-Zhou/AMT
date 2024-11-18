@@ -49,8 +49,34 @@ In addition, currently the maximum number of trucks put into use in a single min
   
 # Test 1
 
-Trucks are not allowed to move laterally along the reference path. In the event of a deadlock, the central CPU will re plan the reference path.  
+Trucks are not allowed to move laterally along the reference path. In the event of a deadlock, the reference path will be replanned.  
 
 ![img](https://github.com/Ji-Zhou/AMT/blob/main/git/4_1.gif)
   
-# Test 1
+# Test 2
+
+Trucks are allowed to move laterally along the reference path. In the event of a deadlock, the reference path will be replanned. But actually, deadlock will not happen in this case.  
+
+![img](https://github.com/Ji-Zhou/AMT/blob/main/git/4_2.gif)
+  
+# Test 3
+
+The above two situations are only for testing the abilities of proposed method. In fact, for extreme cases where the reference paths of two trucks coincide, we choose to consider the midpoint of the overlapping paths as an obstacle and replan the reference path.  
+
+![img](https://github.com/Ji-Zhou/AMT/blob/main/git/4_3.gif)
+  
+# Test 4
+
+In the case of 8 trucks, there will also be no deadlock.  
+
+![img](https://github.com/Ji-Zhou/AMT/blob/main/git/8_1.gif)
+
+# Test 5
+
+In the case of 16 trucks, more braking, reversing, and replanning are carried out, but trucks are still able to reach the finish line smoothly  
+
+![img](https://github.com/Ji-Zhou/AMT/blob/main/git/16_1.gif)
+
+# Experiments
+
+The above tests are proposed for qualitative evaluation purposes. In order to enhance persuasiveness, we compared the methods proposed in [1]-[3] based on several cases. Due to different considerations, the data provided is for reference only. [1] and [2] is not a dynamic method, while [2] and [3] did not consider truck kinematics, their agent can be unconstrained by steering, and did not take into account factors such as steer angle.  
