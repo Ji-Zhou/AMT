@@ -1,6 +1,9 @@
 # AMT
 
-Note: The project is just for internal discussion currently.  For the replay of GIF, please refresh this interface. This project currently does not support loop playback of GIF.
+Note: The project is just for internal discussion currently.  
+  
+For the replay of GIF, please refresh this interface. This project currently does not support loop playback of GIF.  
+  
 Contact me: Ji.Zhou@monash.edu or zhouji1212@gmail.com or ZhouJ@bupt.cn  
   
 # Overview method
