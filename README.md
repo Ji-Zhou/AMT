@@ -51,5 +51,6 @@ In addition, currently the maximum number of trucks put into use in a single min
 
 Trucks are not allowed to move laterally along the reference path. In the event of a deadlock, the central CPU will re plan the reference path.  
 
-![img]([https://github.com/ZhiliangMa/MPU6500-HMC5983-AK8975-BMP280-MS5611-10DOF-IMU-PCB/blob/main/img/IMU-V5-TOP.jpg](https://github.com/Ji-Zhou/AMT/blob/main/git/4_1.gif))
-
+![img](https://github.com/Ji-Zhou/AMT/blob/main/git/4_1.gif)
+  
+# Test 1
