@@ -11,28 +11,24 @@ Conflict-Solver(Central CPU): Priority Based Search
   
 Low-Levl(Truck CPU): Quintic Planner  
   
-# Basic Settings
+# Overview
 
-N mining trucks (6m * 3m) move in specific area (100m * 100m) with own initial and final states. Max speed, acceleration and steer are constricted.  
+N mining trucks (6m × 3m) operate within a designated 100m × 100m area, each starting and ending at specific states. The trucks' maximum speed, acceleration, and steering are constrained to meet realistic operational requirements.  
   
-The truck status includes specific positions and yaw angles, and the reason for this consideration is that trucks typically need to meet specific postures to cooperate with forklift.  
+The state of each truck includes precise positions and yaw angles, as trucks often need to align their posture accurately for cooperation with forklifts.  
   
-The algorithm is dynamic and time step is set as 0.1s. In case, the planned trajectory of each truck is updated every 0.1 seconds, with a planning period of 4.5 seconds to 8.5 seconds.  
+The algorithm is dynamic, with a time step of 0.1 seconds. Accordingly, the planned trajectory of each truck is updated every 0.1 seconds, and the planning period ranges from 4.5 to 8.5 seconds.  
   
-High-Level method provide reference path for each truck and truck is moving following with max offset Path_Width. While no feasible trajectory can be obtained by Low-Level method, truck is braked, 4.5s-8.5s is sufficient for stopping.  
+The high-level method provides a reference path for each truck, and the truck follows it with a maximum allowable lateral offset. If the low-level method fails to generate a feasible trajectory, the truck will brake, and the 4.5–8.5-second planning window is sufficient to bring the truck to a complete stop.  
   
-If there is no truck movement within 10 meters of the stopped truck, it is considered that it can be restarted.  
-  
-Once stopped, maintain the stop state for a minimum of TIME_! seconds.  
-  
-When the stop time exceeds TIME_2 seconds, it is considered as a deadlock and the higher management will replan the reference path.  
+If no other trucks come within 10 meters of a stopped truck, it is considered eligible to restart. However, a stopped truck must remain stationary for at least TIME_1 seconds. If the stop duration exceeds TIME_2 seconds, it is deemed a deadlock, prompting the higher-level control to replan the reference path.  
   
 Remote takeover is allowed during truck stoppage.
   
 # Baseline
 
-[1]-[3] have both open-source their code, where we use the 2D mode of [3]. [1]-[3] do not simultaneously satisfy both kinematics and dynamic characteristics, but we use them  as a comparison to further validate the effectiveness of the proposed method
-
+References [1]-[3] have made their codes open source, and we utilize the 2D mode from [3] for comparison. While [1]-[3] do not simultaneously account for both kinematic and dynamic constraints, they are included as baselines to validate the effectiveness of the proposed method.  
+  
 [1] Y. Ouyang, B. Li, Y. Zhang, T. Acarman, Y. Guo and T. Zhang, "Fast and Optimal Trajectory Planning for Multiple Vehicles in a Nonconvex and Cluttered Environment: Benchmarks, Methodology, and Experiments," 2022 International Conference on Robotics and Automation (ICRA)  
   
 [2]J. Li, M. Ran and L. Xie, "Efficient Trajectory Planning for Multiple Non-Holonomic Mobile Robots via Prioritized Trajectory Optimization," in IEEE Robotics and Automation Letters, vol. 6, no. 2, pp. 405-412, April 2021  
@@ -41,11 +37,12 @@ Remote takeover is allowed during truck stoppage.
   
 # Datasets
 
-Based on the test data used in [2] and [3], we also selected three different sized fleets for testing, including 4, 8, and 16 trucks, evenly distributed in the square area. The line connecting the two opposing vehicles passes through the center of the square.  
-
-The line connecting the starting and ending points of all trucks passes through the center of a square, which is considered an extreme case to qualitatively evaluate the efficiency of the proposed method.  
+Using the test data from [2] and [3], we evaluated our approach on fleets of varying sizes (4, 8, and 16 trucks), evenly distributed within the square area.  
   
-In addition, currently the maximum number of trucks put into use in a single mining area does not exceed 30, and testing the algorithm's ability in conflict areas (loading and unloading areas, interactions) with 16 vehicles is sufficient.  
+For all configurations, the line connecting the start and end points of the trucks passes through the center of the square, representing a challenging case designed to qualitatively assess the efficiency of the proposed method.  
+
+Currently, the maximum number of trucks deployed in a single mining area does not exceed 30. Testing with 16 trucks is sufficient to evaluate the algorithm's performance in high-conflict areas, such as loading and unloading areas or intersections.
+  
   
 # Test 1
 
@@ -79,4 +76,8 @@ In the case of 16 trucks, more braking, reversing, and replanning are carried ou
 
 # Experiments
 
-The above tests are proposed for qualitative evaluation purposes. In order to enhance persuasiveness, we compared the methods proposed in [1]-[3] based on several cases. Due to different considerations, the data provided is for reference only. [1] and [2] is not a dynamic method, while [2] and [3] did not consider truck kinematics, their agent can be unconstrained by steering, and did not take into account factors such as steer angle.  
+The tests serve qualitative evaluation purposes. For further validation, we compared the results of our method with those in [1]-[3]. Note that [1] and [2] are not dynamic methods, and while [2] and [3] do not account for truck kinematics, their agents are unconstrained by steering and other dynamic factors. Thus, their data is provided for reference only.  
+  
+I would like to present the data in the following format. What do you think? The dynamic method has a time step setting, while the static method records as none. Trajectory smoothness will be measured using the root mean square deviation (RMSD) of curvature, and velocity smoothness will be calculated using the RMSD of velocities.  
+  
+![img](https://github.com/Ji-Zhou/AMT/blob/main/git/Figure1.png)
