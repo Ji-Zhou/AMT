@@ -52,7 +52,7 @@ Trucks are not allowed to move laterally along the reference path. In the event 
   
 # Test 2
 
-Trucks are allowed to move laterally along the reference path. In the event of a deadlock, the reference path will be replanned. But actually, deadlock will not happen in this case.  
+Trucks are allowed to move laterally along the reference path.  
 
 ![img](https://github.com/Ji-Zhou/AMT/blob/main/git/4_2.gif)
   
@@ -64,7 +64,7 @@ The above two situations are only for testing the abilities of proposed method. 
   
 # Test 4
 
-In the case of 8 trucks, there will also be no deadlock.  
+In the case of 8 trucks, tasks are perfect finished.  
 
 ![img](https://github.com/Ji-Zhou/AMT/blob/main/git/8_1.gif)
 
