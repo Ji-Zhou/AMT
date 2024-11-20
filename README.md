@@ -8,11 +8,11 @@ Contact me: Ji.Zhou@monash.edu or zhouji1212@gmail.com or ZhouJ@bupt.cn
   
 # Overview method
 
-High-Level(Central CPU): Improved Hybrid A*  
+High-Level: Improved Hybrid A*  
   
-Conflict-Solver(Central CPU): Priority Based Search  
+Conflict-Solver: Priority Based Search  
   
-Low-Levl(Truck CPU): Quintic Planner  
+Low-Levl: Quintic Planner  
   
 # Overview
 
