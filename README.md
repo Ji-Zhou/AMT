@@ -91,7 +91,7 @@ Considering high density obstacles (9 circular obstacles with a radius of 1).
   
 # Experiments
 
-The tests serve qualitative evaluation purposes. For further validation, we compared the results of our method with those in [1]-[3]. Note that [1] and [2] are not dynamic methods, and while [2] and [3] do not account for truck kinematics, their agents are unconstrained by steering and other factors. Thus, the experiments data is provided for reference only due to the algorithms considering different factors and being designed for different scenarios.   
+The tests above serve qualitative evaluation purposes. For further validation, we compared the results of our method with those in [1]-[3]. Note that [1] and [2] are not dynamic methods, and while [2] and [3] do not account for truck kinematics, their agents are unconstrained by steering and other factors. Thus, the experiments data is provided for reference only due to the algorithms considering different factors and being designed for different scenarios.   
   
 In a word, compared with [2] and [3], our path and velocity will definitely be smoother. Compared with [1], the advantages in these indicators may decrease, but we can address more complex and dynamic scenarios.   
   
