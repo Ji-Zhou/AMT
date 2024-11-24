@@ -97,7 +97,7 @@ In a word, compared with [2] and [3], our path and velocity will definitely be s
   
 The dynamic method has a time step setting, while the static method records as none.  RMSD (Root Mean Square Deviation) and CV (Coefficient of Variation) are used to measure smoothness of curve and velocity.  
   
-Due to the privacy of the data in such a open link, the data in the table has not been completed yet, but you can already see some trends. 
+Considering the privacy of the data in such a open link, the data in the table has not been completed yet, but you can already see some trends. 
 
-I will complete these data once I receive your approval if it's no problem completing the experiments like this.  
+I will complete these experiments once I receive your approval if it's no problem doing like this. Maybe other indicators can be considered. 
 ![img](https://github.com/Ji-Zhou/AMT/blob/main/git/Figure2.png)
