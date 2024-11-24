@@ -70,17 +70,34 @@ The above two situations are only for testing the abilities of proposed method. 
 In the case of 8 trucks, tasks can be also finished.  
 
 ![img](https://github.com/Ji-Zhou/AMT/blob/main/git/8_1.gif)
-
+  
 # Test 5
 
 In the case of 16 trucks, more braking, reversing, and replanning are carried out, but trucks are still able to reach the finish point.    
 
 ![img](https://github.com/Ji-Zhou/AMT/blob/main/git/16_1.gif)
+  
+# Test 6
 
+Considering low density obstacles (5 circular obstacles with a radius of 1).    
+
+![img](https://github.com/Ji-Zhou/AMT/blob/main/git/16_Low.gif)
+  
+# Test 7
+
+Considering high density obstacles (9 circular obstacles with a radius of 1).    
+
+![img](https://github.com/Ji-Zhou/AMT/blob/main/git/16_High.gif)
+  
 # Experiments
 
-The tests serve qualitative evaluation purposes. For further validation, we compared the results of our method with those in [1]-[3]. Note that [1] and [2] are not dynamic methods, and while [2] and [3] do not account for truck kinematics, their agents are unconstrained by steering and other dynamic factors. Thus, their data is provided for reference only.  
+The tests serve qualitative evaluation purposes. For further validation, we compared the results of our method with those in [1]-[3]. Note that [1] and [2] are not dynamic methods, and while [2] and [3] do not account for truck kinematics, their agents are unconstrained by steering and other factors.   
   
-I would like to present the data in the following format. What do you think? The dynamic method has a time step setting, while the static method records as none. Trajectory smoothness will be measured using the root mean square deviation (RMSD) of curvature, and velocity smoothness will be calculated using the RMSD of velocities.  
+In a word, compared with [2] and [3], our path and velocity will definitely be smoother. Compared with [1], the advantages in these indicators may decrease, but we can address more complex and dynamic scenarios. Thus, the experiments data is provided for reference only.  
   
-![img](https://github.com/Ji-Zhou/AMT/blob/main/git/Figure1.png)
+The dynamic method has a time step setting, while the static method records as none.  RMSD (Root Mean Square Deviation) and CV (Coefficient of Variation) are used to measure smoothness of curve and velocity.  
+  
+Due to the privacy of the data in such a open link, the data in the table has not been completed yet, but you can already see some trends. 
+
+I will complete these data once I receive your approval if it's no problem completing the experiments like this.  
+![img](https://github.com/Ji-Zhou/AMT/blob/main/git/Figure2.png)
