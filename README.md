@@ -12,7 +12,7 @@ High-Level: Improved Hybrid A*
   
 Conflict-Solver: Priority Based Search  
   
-Low-Levl: Quintic Planner  
+Low-Level: Quintic Planner  
   
 # Overview
 
