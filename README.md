@@ -101,7 +101,7 @@ I will complete these experiments once I receive your approval if it's no proble
 
 
   
-Brief discussion about the results:  
+# Brief Discussion
 
 Compared to [3], which did not account for truck kinematics, our approach produces significantly smoother paths and velocity profiles. However, this comes at the cost of slightly longer computation times. Despite having fewer constraints, their method struggles to handle scenarios both without obstacles and with a high number of vehicles. In obstacle-free cases, vehicles tend to cluster at the center of the area, while the presence of obstacles interestingly forces them onto less congested routes. Similarly, increasing the number of vehicles can result in deadlocks.  
 
