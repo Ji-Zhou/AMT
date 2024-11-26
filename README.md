@@ -26,7 +26,7 @@ The high-level method provides a reference path for each truck, and the truck fo
   
 If no other trucks come within 10 meters of a stopped truck, it is considered eligible to restart. However, a stopped truck must remain stationary for at least TIME_1 seconds. If the stop duration exceeds TIME_2 seconds, it is deemed a deadlock, prompting the higher-level control to replan the reference path.  
   
-Remote takeover is allowed during truck stoppage.
+Remote takeover can be allowed during truck stoppage.
   
 # Baseline
 
@@ -98,10 +98,11 @@ The dynamic method has a time step setting, while the static method records as n
 Considering the privacy of the data in such a open link, the data in the table has not been completed yet, but you can already see some trends. 
 
 I will complete these experiments once I receive your approval if it's no problem doing like this. Maybe other indicators can be considered.  
+
+
   
-====
 Brief discussion about the results:  
-====
+
 Compared to [3], which did not account for truck kinematics, our approach produces significantly smoother paths and velocity profiles. However, this comes at the cost of slightly longer computation times. Despite having fewer constraints, their method struggles to handle scenarios both without obstacles and with a high number of vehicles. In obstacle-free cases, vehicles tend to cluster at the center of the area, while the presence of obstacles interestingly forces them onto less congested routes. Similarly, increasing the number of vehicles can result in deadlocks.  
 
 In contrast to [1] and [2], which treat multi-vehicle motion as a static problem, our algorithm can handle dynamic obstacles and other unexpected situations, making it more adaptable to real-world applications.  
