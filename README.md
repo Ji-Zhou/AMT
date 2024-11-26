@@ -91,13 +91,23 @@ Considering high density obstacles (9 circular obstacles with a radius of 1).
   
 # Experiments
 
-The tests above serve qualitative evaluation purposes. For further validation, we compared the results of our method with those in [1]-[3]. Note that [1] and [2] are not dynamic methods, and while [2] and [3] do not account for truck kinematics, their agents are unconstrained by steering and other factors. Thus, the experiments data is provided for reference only due to the algorithms considering different factors and being designed for different scenarios.   
-  
-In a word, compared with [2] and [3], our path and velocity will definitely be smoother. Compared with [1], the advantages in these indicators may decrease, but we can address more complex and dynamic scenarios.   
-  
+The tests above serve qualitative evaluation purposes. For further validation, we compared the results of our method with those in [1]-[3]. Note that [1] and [2] are not dynamic methods, and while [3] do not account for truck kinematics, their agents are unconstrained by steering and other factors. Thus, the experiments data is provided for reference only due to the algorithms considering different factors and being designed for different scenarios.   
+     
 The dynamic method has a time step setting, while the static method records as none.  RMSD (Root Mean Square Deviation) and CV (Coefficient of Variation) are used to measure smoothness of curve and velocity.  
   
 Considering the privacy of the data in such a open link, the data in the table has not been completed yet, but you can already see some trends. 
 
-I will complete these experiments once I receive your approval if it's no problem doing like this. Maybe other indicators can be considered. 
-![img](https://github.com/Ji-Zhou/AMT/blob/main/git/Figure2.png)
+I will complete these experiments once I receive your approval if it's no problem doing like this. Maybe other indicators can be considered.  
+  
+====
+Brief discussion about the results:  
+====
+Compared to [3], which did not account for truck kinematics, our approach produces significantly smoother paths and velocity profiles. However, this comes at the cost of slightly longer computation times. Despite having fewer constraints, their method struggles to handle scenarios both without obstacles and with a high number of vehicles. In obstacle-free cases, vehicles tend to cluster at the center of the area, while the presence of obstacles interestingly forces them onto less congested routes. Similarly, increasing the number of vehicles can result in deadlocks.  
+
+In contrast to [1] and [2], which treat multi-vehicle motion as a static problem, our algorithm can handle dynamic obstacles and other unexpected situations, making it more adaptable to real-world applications.  
+
+Compared with static methods, dynamic methods have some natural disadvantages, due to the main goal of algorithm development is to find better feasible solution within a limited search space, rather than further refining and optimizing this solution.  
+
+Nevertheless, our algorithm still performs excellently. Compared to [2], our trajectories may be slightly longer, but they are significantly smoother in both path and velocity, enhancing compatibility with lower-level controllers. The smoothness of our results is comparable to [1], but our algorithm is capable of solving more complex and challenging scenarios, such as the scenarios with 16 trucks.  
+
+![img](https://github.com/Ji-Zhou/AMT/blob/main/git/Figure3.png)
