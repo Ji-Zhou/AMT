@@ -111,4 +111,4 @@ Compared with static methods, dynamic methods have some natural disadvantages, d
 
 Nevertheless, our algorithm still performs excellently. Compared to [2], our trajectories may be slightly longer, but they are significantly smoother in both path and velocity, enhancing compatibility with lower-level controllers. The smoothness of our results is comparable to [1], but our algorithm is capable of solving more complex and challenging scenarios, such as the scenarios with 16 trucks.  
 
-![img](https://github.com/Ji-Zhou/AMT/blob/main/git/Figure3.png)
+![img](https://github.com/Ji-Zhou/AMT/blob/main/git/Figure4.png)
